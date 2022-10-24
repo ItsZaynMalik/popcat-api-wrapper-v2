@@ -12,7 +12,7 @@
 ## Installation
 
 ```
-npm i popcat-wrapper
+npm i @mrbeastprolevel/popcat-api-wrapper-v2
 ```
 
 ## Examples
@@ -20,7 +20,7 @@ npm i popcat-wrapper
 ### Jokes command, no input example:
 
 ```js
-const pop = require("popcat-api-wrapper-v2");
+const pop = require("@mrbeastprolevel/popcat-api-wrapper-v2");
 const Discord = require("discord.js");
 const client = new Discord.Client({
   intents: ["Guilds", "GuildMessages", "GuildMembers"],
@@ -41,7 +41,7 @@ client.login("bot token");
 ### Biden command, 1 text input example
 
 ```js
-const pop = require("popcat-api-wrapper-v2");
+const pop = require("@mrbeastprolevel/popcat-api-wrapper-v2");
 const Discord = require("discord.js");
 
 const text = "String";
@@ -57,7 +57,7 @@ img.then(() => {
 ### Pooh meme command, more than one text input example
 
 ```js
-const pop = require("popcat-api-wrapper-v2");
+const pop = require("@mrbeastprolevel/popcat-api-wrapper-v2");
 const Discord = require("discord.js");
 
 const text1 = "String";
@@ -75,7 +75,7 @@ img.then(() => {
 
 ```js
 const Discord = require("discord.js");
-const pop = require("popcat-api-wrapper-v2");
+const pop = require("@mrbeastprolevel/popcat-api-wrapper-v2");
 
 let user = message.mentions.users.first() || message.author;
 const av = user.displayAvatarURL();
@@ -93,7 +93,7 @@ image.then(() => {
 ### Color command, object output example:
 
 ```js
-const pop = require("popcat-api-wrapper-v2");
+const pop = require("@mrbeastprolevel/popcat-api-wrapper-v2");
 
 const color = "ffcc99";
 const output = await pop.colorinfo(color);
@@ -119,7 +119,7 @@ This method applies for Playstore, iTunes, WouldYouRather, RandomMeme, instagram
 ### Welcome Card
 
 ```js
-const pop = require('popcat-api-wrapper-v2')
+const pop = require('@mrbeastprolevel/popcat-api-wrapper-v2')
 const Discord = require("discord.js")
 const image = await pop.welcomecard(background, avatar, text_1, text_2, text_3)
 image.then(() => {
