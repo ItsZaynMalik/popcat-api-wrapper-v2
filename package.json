@@ -1,5 +1,5 @@
 {
-  "name": "popcat-api-wrapper-v2",
+  "name": "@mrbeastprolevel/popcat-api-wrapper-v2",
   "version": "2.0.0",
   "description": "An API wrapper for the pop cat API to make your life easier while using it!",
   "keywords": [
@@ -11,7 +11,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Pop Cat",
+  "author": "Zayn",
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^2.6.1"
