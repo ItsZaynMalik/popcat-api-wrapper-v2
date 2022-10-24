@@ -131,3 +131,9 @@ image.then(() => {
 ## Endpoints
 
 You can get a full list of the possible API endpoints [Here](https://api.popcat.xyz/)
+
+## Support
+
+DM `Zayn#9478` For Help & Support
+
+![](https://discord.c99.nl/widget/theme-1/767627938433597450.png)  
