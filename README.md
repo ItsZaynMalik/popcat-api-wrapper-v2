@@ -1,10 +1,6 @@
 <div align="center">
   <h1>popcat-api-wrapper-v2</h1>
   <p>
-    <a href="https://www.npmjs.com/package/popcat-api-wrapper-v2"><img src="https://img.shields.io/npm/v/popcat-api-wrapper-v2?maxAge=3600" alt="NPM version" /></a>
-    <a href="https://www.npmjs.com/package/popcat-api-wrapper-v2"><img src="https://img.shields.io/npm/dt/popcat-api-wrapper-v2?maxAge=3600" alt="NPM downloads" /></a>
-  </p>
-  <p>
     <a href="https://www.npmjs.com/package/popcat-api-wrapper-v2r"><img src="https://nodei.co/npm/popcat-api-wrapper-v2.png?downloads=true&stars=true" alt="NPM Banner"></a>
   </p>
 </div>
