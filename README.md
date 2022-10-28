@@ -29,7 +29,7 @@ const client = new Discord.Client({
 client.on("messageCreate", async (message) => {
   if (message.content.toLowerCase() === ">joke") {
     const joke = await pop.joke();
-    joke.then((res) => {
+    joke.then(async (res) => {
       message.channel.send(res);
     });
   }
@@ -90,14 +90,37 @@ image.then(() => {
 });
 ```
 
-### Color command, object output example:
+### Lyrics command, object output example :
+```js
+const pop = require("@mrbeastprolevel/popcat-api-wrapper-v2");
+const song = "Zayn Vibez" // Song name
+const lyrics = pop.lyrics(song)
+lyrics.then(async (res) => {
+    console.log(res) // This will return an object with the song name, artist, and lyrics etc.
+    // console.log(data[0].lyrics) -> To get the lyrics only
+    // console.log(data[0].artist) -> To get the artist only
+    // console.log(data[0].title) -> To get the song name only
+    // console.log(data[0].album) -> To get the album name only 
+    // console.log(data[0].image) -> To get the album image only
+})
+
+/**
+ {
+   lyrics: 'Lyrics',
+   artist: 'Artist',
+   title: 'Title',
+   album: 'Album',
+  image: 'Image'
+ }*/
+```
+### Color command, object output example :
 
 ```js
 const pop = require("@mrbeastprolevel/popcat-api-wrapper-v2");
 
 const color = "ffcc99";
 const output = await pop.colorinfo(color);
-output.then((res) => {
+output.then(async (res) => {
   console.log(res);
 });
 /**

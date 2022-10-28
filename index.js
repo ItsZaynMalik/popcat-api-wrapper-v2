@@ -33,6 +33,14 @@ module.exports.instagramUser = async function(username) {
   const js = JSON.parse(account)
   return js;
 }
+module.exports.lyrics = async function(song) {
+  if(!song) throw new Error("The field 'song' was left empty in the lyrics function.")
+  let name = song
+  const res = await fetch(`https://api.popcat.xyz/lyrics?song=${name.split(" ").join("+")}`)
+  let json = await res.json()
+  if(json.error) throw new Error(json.error)
+  return json
+}
 module.exports.drake = async function(text1, text2) {
    if(!text1) throw new Error('The field text1 was left empty in the drake function')
     if(!text2) throw new Error('The field text2 was left empty in the drake function')
