@@ -16,6 +16,13 @@ module.exports.npm = async function(pkg) {
     return js;
   }
 }
+module.exports.github = async function(name) {
+if(!name) throw new Error("The field 'username' was left empty in the Github function!")
+  const url = `https://api.popcat.xyz/github/${encodeURIComponent(name)}`
+  const res = await fetch(url)
+  const js = await res.json()
+  return js;
+}
 module.exports.fact = async function() {
   const url = `https://api.popcat.xyz/fact`
   const fa = await fetch(url)
@@ -125,6 +132,12 @@ module.exports.ad = async function(image) {
   const input = `image=${encodeURIComponent(image)}`
   const res = await request('ad', input)
   return res;
+}
+module.exports.screenshot = async function(url) {
+  if(!url) throw new Error("The field 'url' was left empty in the screenshot function.")
+  const input = `url=${encodeURIComponent(url)}`
+  const res = await request('screenshot', input)
+  return res
 }
 module.exports.blur = async function(image) {
   if(!image) throw new Error("The field 'image' was left empty in the blur function. Need help? https://dsc.gg/popcatcom")
