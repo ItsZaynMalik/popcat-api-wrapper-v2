@@ -168,7 +168,7 @@ You can get a full list of the possible API endpoints [Here](https://api.popcat.
 
 ## Copyright
 
-- This API wrapper v1 was coded by popcat api developer. I've just updated and added quite a few new things init. Copyright goes to him respectively!.
+- This API wrapper v1 was coded by popcat api developer. I've just updated and added quite a few new things init. Copyright goes to him respectively!. Click [here](https://github.com/CoderPopCat/pop-cat-wrapper) To see the v1 wrapper.
 
 ## Support
 
