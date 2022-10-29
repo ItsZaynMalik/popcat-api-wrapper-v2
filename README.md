@@ -26,7 +26,7 @@ client.on("messageCreate", async (message) => {
   if (message.content.toLowerCase() === ">joke") {
     const joke = await pop.joke();
     joke.then(async (res) => {
-      message.channel.send(res);
+      <Channel>.send(res);
     });
   }
 });
@@ -44,7 +44,7 @@ const text = "String";
 const img = await pop.biden(text);
 img.then(() => {
   const image = new Discord.AttachmentBuilder(img, { name: "biden.png" });
-  message.channel.send({
+  <Channel>.send({
     files: [image],
   });
 });
@@ -61,12 +61,27 @@ const text2 = "String 2";
 const img = await pop.pooh(text1, text2);
 img.then(() => {
   const image = new Discord.AttachmentBuilder(img, { name: "pooh.png" });
-  message.channel.send({
+  <Channel>.send({
     files: [image],
   });
 });
 ```
+### Screenshot command, image output / output example \
 
+```js
+ const pop = require("@mrbeastprolevel/popcat-api-wrapper-v2");
+ const Discord = require("discord.js");
+ 
+ const url = "https://youtube.com" // Any url
+ const ss = await pop.screenshot(url);
+
+ ss.then(() => {
+   const image = new Discord.AttachmentBuilder(ss, { name: "screenshot.png" });
+  <Channel>.send({
+     files: [image],
+   })
+   })
+```
 ### Drip command, image input example
 
 ```js
@@ -80,7 +95,7 @@ const image = await pop.drip(av);
 
 image.then(() => {
   const attachment = new Discord.AttachmentBuilder(res, { name: "drip.png" });
-  message.channel.send({
+  <Channel>.send({
     files: [attachment],
   });
 });
@@ -150,6 +165,10 @@ image.then(() => {
 ## Endpoints
 
 You can get a full list of the possible API endpoints [Here](https://api.popcat.xyz/)
+
+## Copyright
+
+- This API wrapper v1 was coded by popcat api developer. I've just updated and added quite a few new things init. Copyright goes to him respectively!.
 
 ## Support
 
