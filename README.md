@@ -1,3 +1,6 @@
+# Build settings
+markdown: kramdown 
+theme: minima
 <div align="center">
   <h1>popcat-api-wrapper-v2</h1>
   <p>
