@@ -284,4 +284,10 @@ module.exports._8ball = async function() {
   const json = await res.json()
   return json.answer;
 }
+module.exports.pet = async function(image) {
+  if(!image) throw new Error("The field 'image' was left empty in the pet function.")
+  const input = `image=${encodeURIComponent(image)}`
+  const res = await request("pet", input)
+  return res;
+}
 
